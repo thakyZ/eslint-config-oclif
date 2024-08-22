@@ -24,6 +24,7 @@
   "keywords": [
     "oclif"
   ],
+  "type": "module",
   "license": "MIT",
   "main": "index.js",
   "repository": "oclif/eslint-config-oclif",

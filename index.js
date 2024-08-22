@@ -7,7 +7,6 @@ import path from "node:path";
 
 // Mimic CommonJS variables -- not needed if using CommonJS
 const __filename = fileURLToPath(import.meta.url);
-console.log(__filename);
 const __dirname = path.dirname(__filename);
 
 const compat = new FlatCompat({
@@ -17,9 +16,8 @@ const compat = new FlatCompat({
 
 export default [
   ...compat.extends( 'eslint:recommended', 'xo-space', 'plugin:n/recommended', 'plugin:unicorn/recommended'),
-  ...compat.plugins( 'mocha')
+  ...compat.plugins( 'mocha'),
   nodePlugin.configs["flat/recommended"],
-  ...typescript.configs.recommended,
   ...compat.config({
     rules: {
       'capitalized-comments': 0,
